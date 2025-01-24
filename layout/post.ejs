@@ -1,15 +1,23 @@
 <%- partial('_partial/head') %>
 
 <!-- 全局样式: 引用本地 /css/style.css -->
-<link rel="stylesheet" href="<%= url_for('/css/style.css') %>">
+<link rel="stylesheet" href="/css/style.css">
 
-<!-- highlight.js 样式与脚本 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/arta.min.css">
-<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/highlight.min.js"></script>
+<!-- highlight.js 样式与脚本 (使用本地资源) -->
+<link rel="stylesheet" href="/css/arta.min.css">
+<script src="/js/highlight.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // 确保 highlight.js 已加载后再调用
-    hljs.highlightAll();
+    function highlightCode() {
+      if (window.hljs) {
+        hljs.highlightAll();
+      } else {
+        console.error('highlight.js is not loaded');
+        // 尝试在短延迟后再次加载
+        setTimeout(highlightCode, 100);
+      }
+    }
+    highlightCode();
   });
 </script>
 
@@ -47,7 +55,7 @@
     margin-bottom: 2em;
   }
 
-  /* 如果要针对代码块做额外样式，可加 */
+  /* 针对代码块的额外样式 */
   pre code {
     font-family: "IosevkaAile-Regular", monospace;
     font-size: 0.9rem;
