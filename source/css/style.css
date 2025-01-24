@@ -1,0 +1,196 @@
+/* source/css/style.css */
+
+/* ========== Font Import ========== */
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-Thin.ttc") format("truetype");
+  font-weight: 100; /* Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-ExtraLight.ttc") format("truetype");
+  font-weight: 200; /* ExtraLight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-Light.ttc") format("truetype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-Regular.ttc") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-Medium.ttc") format("truetype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-SemiBold.ttc") format("truetype");
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-Bold.ttc") format("truetype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-ExtraBold.ttc") format("truetype");
+  font-weight: 800; /* ExtraBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-Heavy.ttc") format("truetype");
+  font-weight: 900; /* Heavy */
+  font-style: normal;
+}
+
+/* ========== Global Styles ========== */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F8F5D7;
+  /* Set a fallback font for Chinese characters */
+  font-family: "IosevkaAile", "PingFang SC", "Microsoft Yahei", sans-serif;
+  font-weight: 400; /* Default regular */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* For different text weights, use font-weight on specific elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "IosevkaAile", "PingFang SC", "Microsoft Yahei", sans-serif;
+  margin: 1em 0 0.5em 0;
+  font-weight: 600; /* Example: Use SemiBold for headings */
+}
+
+a {
+  color: #cc0052;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff007f;
+  text-decoration: underline;
+}
+
+/* Post list container */
+.post-list {
+  margin: 2em auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+/* Header container styles */
+.site-header {
+  background-color: #f1eec2;
+  padding: 10px 2em;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2em; /* Controls spacing between Logo, Title, and Menu */
+}
+
+.site-logo img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.site-title {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5em;
+}
+
+.site-nav a,
+.header-right a {
+  color: #333;
+  text-decoration: underline; /* Example: Always show underline for links */
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.site-nav a:hover,
+.header-right a:hover {
+  color: #000;
+  text-decoration-color: #000;
+}
+
+/* Add background color for the intro section and use flex layout */
+.home-intro {
+background-color: #D5C4A1;
+padding: 2em;
+margin-bottom: 2em;
+border-radius: 6px;
+
+display: flex;
+align-items: flex-start;  /* Align image and text to the top */
+gap: 2em;                 /* Add spacing between image and text */
+}
+
+/* Styles for avatar image */
+.intro-avatar img {
+width: 120px;
+height: auto;
+border-radius: 50%;
+display: block;
+}
+
+/* Text section styles */
+.intro-text {
+/* Default is left-aligned; no need to explicitly set text-align */
+}
+
+.intro-title {
+font-size: 2rem;
+margin: 0 0 0.5em;
+}
+
+.intro-subtitle {
+font-size: 1.2rem;
+color: #555;
+margin-bottom: 1em;
+}
+
+.intro-desc {
+line-height: 1.6;
+}

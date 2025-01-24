@@ -1,0 +1,78 @@
+<%- partial('_partial/head') %>
+
+<!-- 全局样式: 引用本地 /css/style.css -->
+<link rel="stylesheet" href="<%= url_for('/css/style.css') %>">
+
+<!-- highlight.js 样式与脚本 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/arta.min.css">
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/highlight.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 确保 highlight.js 已加载后再调用
+    hljs.highlightAll();
+  });
+</script>
+
+<style>
+  /* 
+    post.ejs 只放与正文/标题有关的额外样式。
+    其余全局样式请放到 style.css 中管理 
+  */
+
+  body {
+    /* 若仍要覆盖背景/字体，可在这里或 style.css 中设置 */
+    background-color: #F8F5D7;
+    margin: 0;
+    padding: 0;
+  }
+
+  .post-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+  }
+
+  .post-title {
+    /* 使用 Podkova ExtraBold (参见 style.css 或 @font-face) */
+    font-family: "Podkova", serif; 
+    font-weight: 800; 
+    font-size: 2rem;
+    margin: 0 0 0.3em 0;
+    color: #333;
+  }
+
+  .post-content {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2em;
+  }
+
+  /* 如果要针对代码块做额外样式，可加 */
+  pre code {
+    font-family: "IosevkaAile-Regular", monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-radius: 4px;
+    display: block;
+    overflow-x: auto;
+  }
+</style>
+
+<body>
+<%- partial('_partial/header') %>
+
+<div class="post-container">
+  <!-- 文章标题 -->
+  <h1 class="post-title"><%= page.title %></h1>
+
+  <!-- 文章内容 (Markdown解析输出) -->
+  <div class="post-content">
+    <%- page.content %>
+  </div>
+  
+  <!-- 如果有标签或分享按钮，可以加在这里 -->
+</div>
+
+<%- partial('_partial/footer') %>
+</body>
+</html>
