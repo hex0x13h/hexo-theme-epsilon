@@ -1,30 +1,45 @@
 # hexo-theme-iaso/_config.yml
 
-# 主题基础信息
-title: "Me"            # 站点标题
+
+title: "Me"            
 logo: "https://t3.ftcdn.net/jpg/02/89/21/84/360_F_289218444_XBzAVMbqNpj3xsSG8E0MslwX2R9RGSxd.jpg"   # Logo 图片相对路径
 description: "A Hexo theme with bilingual support"
 
-# 默认语言
-# 如果你希望默认为中文，可改为: zh-CN
+#  zh-CN
 language: en
 
+
+
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
 # 菜单示例（可在下面的多语言 yml 中实现 i18n）
 menu:                  # 导航菜单列表
   - text: "Blog"
     link: "/blog"
   - text: "Contact"
     link: "/contact"
-  - text: "Resume"
-    link: "/resume"
-  - text: "Talks"
-    link: "/talks"
-  - text: "Xecast"
-    link: "/xecast"
+  - text: "Tags"
+    link: "/tags"
+  - text: "Category"
+    link: "/category"
+  - text: "Talk"
+    link: "/talk"
 
 headerRight:           # 右侧单独链接
-  text: "Signalboost"
-  link: "/signalboost"
+  text: "Other"
+  link: "/other"
 
 # 自定义配色
 colors:
@@ -133,4 +148,4 @@ css:
   - css/style.css
 
 # 作者信息（也可放在这里方便 ejs 中读取）
-author: "Your Name"
+author: "Ian"

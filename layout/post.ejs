@@ -1,86 +1,76 @@
+<!-- layout/post.ejs -->
 <%- partial('_partial/head') %>
+<body class="post-page">
+    <%- partial('_partial/header') %>
 
-<!-- 全局样式: 引用本地 /css/style.css -->
-<link rel="stylesheet" href="/css/style.css">
+    <div class="post-container">
+        <!-- 博文标题 -->
+        <h1><%= page.title %></h1>
 
-<!-- highlight.js 样式与脚本 (使用本地资源) -->
-<link rel="stylesheet" href="/css/arta.min.css">
-<script src="/js/highlight.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    function highlightCode() {
-      if (window.hljs) {
-        hljs.highlightAll();
-      } else {
-        console.error('highlight.js is not loaded');
-        // 尝试在短延迟后再次加载
-        setTimeout(highlightCode, 100);
-      }
-    }
-    highlightCode();
-  });
-</script>
+        <!-- 博文元数据（日期、标签） -->
+        <div class="post-meta">
+            <span><%= page.date.format('MMMM DD, YYYY') %></span>
+            <% if (page.tags && page.tags.length) { %>
+                | <span><%= __('meta.tags') %>:
+                    <% page.tags.forEach(function(tag, index) { %>
+                        <a href="<%= url_for(tag.path) %>"><%= tag.name %></a><%= index < page.tags.length - 1 ? ', ' : '' %>
+                    <% }) %>
+                </span>
+            <% } %>
+        </div>
 
-<style>
-  /* 
-    post.ejs 只放与正文/标题有关的额外样式。
-    其余全局样式请放到 style.css 中管理 
-  */
+        <!-- 博文内容 -->
+        <div class="post-content">
+            <%- page.content %>
+        </div>
 
-  body {
-    /* 若仍要覆盖背景/字体，可在这里或 style.css 中设置 */
-    background-color: #F8F5D7;
-    margin: 0;
-    padding: 0;
-  }
+        <!-- 分享按钮 -->
+        <div class="share-buttons">
+            <a href="https://twitter.com/intent/tweet?url=<%= url_for(page.path, true) %>&text=<%= encodeURIComponent(page.title) %>" target="_blank" aria-label="<%= __('share.twitter') %>">
+                <i class="fab fa-twitter" aria-hidden="true"></i> <%= __('share.twitter') %>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=<%= url_for(page.path, true) %>" target="_blank" aria-label="<%= __('share.facebook') %>">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i> <%= __('share.facebook') %>
+            </a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=<%= url_for(page.path, true) %>&title=<%= encodeURIComponent(page.title) %>" target="_blank" aria-label="<%= __('share.linkedin') %>">
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i> <%= __('share.linkedin') %>
+            </a>
+            <!-- 根据需要添加更多分享按钮 -->
+        </div>
 
-  .post-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1em;
-  }
+        <!-- 文章标签 -->
+        <% if (page.tags && page.tags.length) { %>
+            <div class="post-tags">
+                <strong><%= __('share.tags_label') %></strong>
+                <% page.tags.forEach(function(tag, index) { %>
+                    <a href="<%= url_for(tag.path) %>"><%= tag.name %></a>
+                <% }) %>
+            </div>
+        <% } %>
 
-  .post-title {
-    /* 使用 Podkova ExtraBold (参见 style.css 或 @font-face) */
-    font-family: "Podkova", serif; 
-    font-weight: 800; 
-    font-size: 2rem;
-    margin: 0 0 0.3em 0;
-    color: #333;
-  }
+        <!-- 文章导航（上一篇/下一篇） -->
+        <div class="post-navigation">
+            <% if (page.prev) { %>
+                <a href="<%= url_for(page.prev.path) %>">&#8592; <%= __('navigation.previous') %>: <%= page.prev.title %></a>
+            <% } else { %>
+                <span></span>
+            <% } %>
 
-  .post-content {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 2em;
-  }
+            <% if (page.next) { %>
+                <a href="<%= url_for(page.next.path) %>"><%= __('navigation.next') %>: <%= page.next.title %> &#8594;</a>
+            <% } else { %>
+                <span></span>
+            <% } %>
+        </div>
 
-  /* 针对代码块的额外样式 */
-  pre code {
-    font-family: "IosevkaAile-Regular", monospace;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    border-radius: 4px;
-    display: block;
-    overflow-x: auto;
-  }
-</style>
+        <!-- 评论区（如果使用评论系统） -->
+        <% if (theme.disqus && theme.disqus.shortname) { %>
+            <div id="comments">
+                <%- partial('disqus') %>
+            </div>
+        <% } %>
+    </div>
 
-<body>
-<%- partial('_partial/header') %>
-
-<div class="post-container">
-  <!-- 文章标题 -->
-  <h1 class="post-title"><%= page.title %></h1>
-
-  <!-- 文章内容 (Markdown解析输出) -->
-  <div class="post-content">
-    <%- page.content %>
-  </div>
-  
-  <!-- 如果有标签或分享按钮，可以加在这里 -->
-</div>
-
-<%- partial('_partial/footer') %>
+    <%- partial('_partial/footer') %>
 </body>
 </html>

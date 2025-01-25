@@ -10,6 +10,20 @@ post:
   publish_info: "发表于 %date，%words 字，大约需要 %minutes 分钟阅读"
   share_button: "分享"
 
+share:
+  twitter: "分享到Twitter"
+  facebook: "分享到Facebook"
+  linkedin: "分享到LinkedIn"
+  tags_label: "标签:"
+
+navigation:
+  previous: "上一篇"
+  next: "下一篇"
+
+meta:
+  date: "日期"
+  tags: "标签"
+
 misc:
   read_more: "阅读更多"
   recent_articles: "最新文章"

@@ -106,6 +106,22 @@
     </section>
   <% } %>
 
+      <!-- Tags... theme.mytags  -->
+  <% if (theme.mytags && theme.mytags.length) { %>
+    <section style="display: flex; flex-wrap: wrap; gap: 1em;">
+      <% theme.mytags.forEach(function(tag){ %>
+        <span style="
+          display: inline-block;
+          background-color: #E8D3AB;
+          padding: 0.3em 0.6em;
+          border-radius: 4px;
+          font-size: 16px;
+        ">
+          <%= tag %>
+        </span>
+      <% }) %>
+    </section>
+  <% } %>
 </div>
 
 <%- partial('_partial/footer') %>

@@ -10,6 +10,20 @@ post:
   publish_info: "Published on %date, %words words, %minutes minutes to read"
   share_button: "Share"
 
+share:
+  twitter: "Share on Twitter"
+  facebook: "Share on Facebook"
+  linkedin: "Share on LinkedIn"
+  tags_label: "Tags:"
+
+navigation:
+  previous: "Previous Post"
+  next: "Next Post"
+
+meta:
+  date: "Date"
+  tags: "Tags"
+
 misc:
   read_more: "Read more"
   recent_articles: "Recent Articles"
