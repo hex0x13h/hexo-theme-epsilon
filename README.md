@@ -38,6 +38,8 @@ Epsilon includes the fonts IosevkaAile and Podkova. You can add more fonts by up
 Hi there! I’m a beginner in Hexo theme development, and this is my first attempt at building a theme.
 Your feedback and suggestions are always welcome! Please report issues or contribute via pull requests.
 
+This theme is modeled after [Xe Iaso](https://xeiaso.net/)).
+
 
 Thank you for your interest in Epsilon! If you have any questions, feel free to reach out or open an issue.  
 Happy blogging! 
