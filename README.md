@@ -12,6 +12,23 @@ This theme is my first attempt at developing a Hexo theme, so please forgive any
 - **Customizable Tags and Projects**: Add and manage highlighted projects and tags through the `_config.yml`.
 - **RSS and JSON Feeds**: Automatic generation for RSS and JSON feeds.
 
+## 🖊 Usage
+
+```
+mkdir source/blog
+touch source/blog/index.md
+
+vim source/blog/index.md
+```
+
+```
+---
+title: Blog
+layout: blog
+---
+
+```
+
 ## 🎨 Custom Fonts
 
 Epsilon includes the fonts IosevkaAile and Podkova. You can add more fonts by updating the source/fonts/ folder and modifying source/css/style.css.
