@@ -35,3 +35,4 @@ misc:
   rss_feed_text: "RSS源"
   blog_feed_intro_part2: "获取自动更新。也可以看看"
   json_feed_text: "JSONFeed"
+  tags_title: "标签"
