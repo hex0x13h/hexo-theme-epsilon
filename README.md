@@ -15,6 +15,10 @@ This theme is my first attempt at developing a Hexo theme, so please forgive any
 ## 🖊 Usage
 
 ```
+npm install --save hexo hexo-cli hexo-server hexo-renderer-ejs hexo-renderer-markdown-it hexo-renderer-stylus hexo-generator-index hexo-generator-archive hexo-generator-category hexo-generator-tag hexo-generator-feed hexo-generator-json-feed hexo-pagination hexo-browsersync hexo-clean-css hexo-generator-sitemap
+
+--- 
+
 mkdir source/blog
 touch source/blog/index.md
 
