@@ -24,8 +24,9 @@ vim source/blog/index.md
 ```
 ---
 title: Blog
-layout: archive
+layout: blog
 ---
+
 ```
 
 ## 🎨 Custom Fonts
