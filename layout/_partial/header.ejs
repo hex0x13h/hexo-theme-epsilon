@@ -28,9 +28,10 @@
         </a>
       <% } %>
 
-      <span style="font-size: 1.5rem; font-weight: bold;">
+      <!-- 使标题可点击，链接到首页 -->
+      <a href="<%= url_for('/') %>" style="font-size: 1.5rem; font-weight: bold; text-decoration: none; color: inherit;">
         <%= theme.title || config.title %>
-      </span>
+      </a>
 
       <nav>
         <ul style="
