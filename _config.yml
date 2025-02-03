@@ -147,3 +147,8 @@ css:
 
 # 作者信息（也可放在这里方便 ejs 中读取）
 author: "Ian"
+
+# Disqus 评论系统
+disqus:
+  enable: false
+  shortname: [shortname]
