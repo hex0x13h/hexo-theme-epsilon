@@ -258,12 +258,14 @@ a:hover {
   overflow: auto;               /* 超出部分添加滚动条 */
   max-width: 100%;              /* 代码块最大宽度不超过容器 */
   box-sizing: border-box;       /* 包括padding和border在内 */
-  background-color: #f0f0f0;    /* 代码块背景色 */
-  padding: 0.5em;                /* 内边距 */
+  background-color: #1E2938;    /* 代码块背景色 */
+  padding: 2em;                /* 内边距 */
+  padding-left: 1em !important; /* 为左侧添加空隙，并强制应用 */
   border-radius: 4px;            /* 圆角 */
   font-family: "IosevkaAile", "PingFang SC", "Microsoft Yahei", sans-serif;
   font-size: 14px;
   line-height: 1.5;
+  color: #ffffff; /* 设置代码文本颜色为白色 */
 }
 
 /* 确保 <code> 标签继承字体 */
@@ -276,7 +278,7 @@ a:hover {
   max-width: 100%;
   overflow: auto;
   margin: 1.5em 0;
-  background-color: #f0f0f0;
+  background-color: #1E2938;
   border-radius: 4px;
 }
 
