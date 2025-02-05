@@ -261,8 +261,8 @@ a:hover {
   background-color: #f0f0f0;    /* 代码块背景色 */
   padding: 0.5em;                /* 内边距 */
   border-radius: 4px;            /* 圆角 */
-  font-family: "IosevkaAile", "PingFang SC", "Microsoft Yahei", sans-serif; /* 字体 */
-  font-size: 14px;               /* 字体大小 */
+  font-family: "IosevkaAile", "PingFang SC", "Microsoft Yahei", sans-serif;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -271,42 +271,42 @@ a:hover {
   font-family: "IosevkaAile", "PingFang SC", "Microsoft Yahei", sans-serif;
 }
 
-/* 如果使用 <figure class="highlight java"> 包裹代码块 */
+/* 如果使用 <figure class="highlight"> 包裹代码块 */
 .post-content figure.highlight {
   max-width: 100%;
   overflow: auto;
-  margin: 1.5em 0;               /* 增加上下外边距 */
-  background-color: #f0f0f0;     /* 背景色 */
-  border-radius: 4px;            /* 圆角 */
+  margin: 1.5em 0;
+  background-color: #f0f0f0;
+  border-radius: 4px;
 }
 
 /* 调整 table 在 figure.highlight 内部的样式 */
 .post-content figure.highlight table {
   width: 100%;
-  table-layout: fixed;           /* 固定表格布局 */
-  border-collapse: collapse;     /* 合并边框 */
+  table-layout: fixed;
+  border-collapse: collapse;
 }
 
 /* 调整代码区域的样式 */
 .post-content figure.highlight .code pre {
   white-space: pre-wrap;
   word-wrap: break-word;
-  margin: 0;                      /* 移除默认外边距 */
-  background-color: transparent;  /* 继承 figure 的背景色 */
-  padding: 0;                     /* 移除内边距 */
-  border: none;                   /* 移除边框 */
+  margin: 0;
+  background-color: transparent;
+  padding: 0;
+  border: none;
 }
 
-/* 可选：隐藏行号（如果不需要） */
+/* 隐藏行号（如果不需要） */
 .post-content figure.highlight .gutter {
   display: none;
 }
 
 /* 代码高亮样式（基于 highlight.js 默认样式） */
 .hljs {
-  background: transparent; /* Set to transparent since figure.highlight has background */
-  padding: 0; /* Remove padding from hljs, since it's handled by pre */
-  border-radius: 0; /* Remove border-radius */
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
 }
 
 .hljs-comment,
@@ -490,7 +490,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 可选：调整链接在 Footer 中的 hover 效果 */
 .footer-link:hover {
   color: #ff007f;
 }
@@ -515,4 +514,24 @@ a:hover {
   .footer-container {
     padding: 1em;
   }
+}
+
+/* 此处样式只作用于 .post-content 内直接生成的表格，避免影响代码框 */
+.post-content > table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  background: transparent;
+}
+
+.post-content > table th,
+.post-content > table td {
+  border: 1px solid #000; /* 黑色边框 */
+  padding: 0.5em;
+  text-align: left;
+}
+
+.post-content > table th {
+  background-color: transparent;
+  font-weight: bold;
 }
