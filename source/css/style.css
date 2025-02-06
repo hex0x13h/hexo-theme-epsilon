@@ -537,3 +537,16 @@ a:hover {
   background-color: transparent;
   font-weight: bold;
 }
+
+/* 确保行内代码框（单个反引号 `code`）的样式 */
+.post-content p code,
+.post-content li code,
+.post-content span code {
+  background-color: #f4f4f4; /* 设置背景色 */
+  padding: 2px 4px; /* 适当的内边距 */
+  border-radius: 4px; /* 轻微圆角 */
+  font-size: 90%; /* 让代码字体稍微缩小 */
+  font-family: "IosevkaAile", "Courier New", monospace;
+  color: #d63384; /* 代码字体颜色 */
+  word-wrap: break-word; /* 允许换行 */
+}
