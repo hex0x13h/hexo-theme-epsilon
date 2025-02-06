@@ -1,4 +1,9 @@
 # Hexo Theme: Epsilon
+![license](https://img.shields.io/github/license/iaaaannn0/hexo-theme-epsilon)
+![language count](https://img.shields.io/github/languages/count/iaaaannn0/hexo-theme-epsilon)
+![repo size](https://img.shields.io/github/repo-size/iaaaannn0/hexo-theme-epsilon)
+
+
 
 Epsilon is a minimal, clean, and highly customizable theme for [Hexo](https://hexo.io/).  
 This theme is my first attempt at developing a Hexo theme, so please forgive any shortcomings! 😊  
@@ -44,7 +49,6 @@ Epsilon includes the fonts IosevkaAile and Podkova. You can add more fonts by up
 
 <img width="976" alt="image" src="https://github.com/user-attachments/assets/2098a2c3-6d17-4166-909a-0a54ed058e6d" />
 
-<img width="937" alt="image" src="https://github.com/user-attachments/assets/96cd2023-ca13-4733-9a70-3b525c764658" />
 
 ## 🚀 Roadmap
 	•	Expand plugin integrations
