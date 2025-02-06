@@ -550,3 +550,27 @@ a:hover {
   color: #d63384; /* 代码字体颜色 */
   word-wrap: break-word; /* 允许换行 */
 }
+
+/* ========== Blockquote Styling ========== */
+
+blockquote {
+  background-color: #f1f1f1;   /* Light background for the blockquote */
+  border-left: 4px solid #cc0052; /* Bold left border with accent color */
+  padding: 1em 1.5em;           /* Add padding inside the blockquote */
+  margin: 1.5em 0;              /* Add space above and below */
+  font-style: italic;           /* Italicize the text */
+  color: #555;                  /* Subtle gray text color */
+  border-radius: 8px;           /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+blockquote p {
+  margin: 0;                    /* Remove extra margin from paragraph inside blockquote */
+}
+
+blockquote footer {
+  font-size: 0.9rem;            /* Slightly smaller font for citation */
+  text-align: right;            /* Align citation text to the right */
+  color: #777;                  /* Lighter color for the citation */
+}
+
