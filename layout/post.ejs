@@ -64,11 +64,12 @@
         </div>
         
         <!-- 评论区 -->
-        <% if (theme.disqus && theme.disqus.shortname) { %>
+        <% if (theme.disqus && theme.disqus.shortname && page.layout === 'post') { %>
             <div id="comments">
                 <%- partial('_partial/disqus') %>
             </div>
         <% } %>
+        
 
     <%- partial('_partial/footer') %>
 </body>
