@@ -1,0 +1,38 @@
+name: Hexo Theme CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint theme code (JS/SCSS etc.)
+        run: |
+          if [ -f ./node_modules/.bin/eslint ]; then
+            npx eslint .
+          else
+            echo "No ESLint config found, skipping lint."
+          fi
+
+      - name: Setup Hexo
+        run: npm install hexo-cli -g
+
+      - name: Build Hexo with theme
+        run: |
+          hexo clean
+          hexo generate
