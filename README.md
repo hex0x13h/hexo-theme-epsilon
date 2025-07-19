@@ -1,7 +1,7 @@
 # Hexo Theme: Epsilon
-![license](https://img.shields.io/github/license/iaaaannn0/hexo-theme-epsilon)
-![language count](https://img.shields.io/github/languages/count/iaaaannn0/hexo-theme-epsilon)
-![repo size](https://img.shields.io/github/repo-size/iaaaannn0/hexo-theme-epsilon)
+![license](https://img.shields.io/github/license/hex0x13h/hexo-theme-epsilon)
+![language count](https://img.shields.io/github/languages/count/hex0x13h/hexo-theme-epsilon)
+![repo size](https://img.shields.io/github/repo-size/hex0x13h/hexo-theme-epsilon)
 
 
 
