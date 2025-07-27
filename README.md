@@ -49,6 +49,27 @@ Epsilon includes the fonts IosevkaAile and Podkova. You can add more fonts by up
 
 <img width="976" alt="image" src="https://github.com/user-attachments/assets/2098a2c3-6d17-4166-909a-0a54ed058e6d" />
 
+## ✅ Admonition Boxes
+In your Markdown file, use this format:
+```
+<div class="admonition TYPE">
+  <p>Your content goes here.</p>
+</div>
+```
+Replace TYPE with one of the following:
+	•	info or note
+	•	warning or important
+	•	danger or critical
+
+These will automatically get styled with colors, borders, shadows, and icon titles like “⚠️ Warning”.
+
+⚠️ Example: Warning Box
+```
+<div class="admonition warning">
+  <p>Do not use development keys in production.</p>
+</div>
+```
+
 
 ## 🚀 Roadmap
 	•	Expand plugin integrations
