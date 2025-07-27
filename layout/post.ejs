@@ -1,5 +1,65 @@
-<!-- layout/post.ejs -->
 <%- partial('_partial/head') %>
+<style>
+  .admonition {
+    border-left: 6px solid #ccc;
+    padding: 1em 1.5em;
+    margin: 1.5em 0;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .admonition-title {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  .admonition.info::before {
+    content: "ℹ️ Information";
+    display: block;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+  }
+
+  .admonition.warning::before {
+    content: "⚠️ Warning";
+    display: block;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+  }
+
+  .admonition.danger::before {
+    content: "❗ Danger";
+    display: block;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+  }
+
+  .info, .note {
+    color: #0277bd;
+    border-left-color: #0288d1;
+    background-color: #e1f5fe;
+  }
+
+  .warning, .important {
+    color: #ef6c00;
+    border-left-color: #fb8c00;
+    background-color: #fff3e0;
+  }
+
+  .danger, .critical {
+    color: #c62828;
+    border-left-color: #e53935;
+    background-color: #ffebee;
+    font-weight: 500;
+    padding: 1.25em 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+</style>
 <body class="post-page">
     <%- partial('_partial/header') %>
 
